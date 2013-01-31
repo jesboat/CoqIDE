@@ -1499,26 +1499,26 @@ endfunction
 
 " Map the commands to <F2>-<F6>
 function s:SetMapKey()
-  nmap <buffer> <silent> <F2> :<C-U>IDEUndo<CR>
-  imap <buffer> <silent> <F2> <ESC>:IDEUndo<CR>
+  nmap <buffer> <Esc><Up> :IDEUndo<CR>
+  imap <buffer> <Esc><Up> <C-o>:IDEUndo<CR>
 
-  nmap <buffer> <silent> <F3> :<C-U>IDENext<CR>
-  imap <buffer> <silent> <F3> <ESC>:IDENext<CR>
+  nmap <buffer> <Esc><Down> :IDENext<CR>
+  imap <buffer> <Esc><Down> <C-o>:IDENext<CR>
 
-  nmap <buffer> <silent> <F4> :<C-U>IDEToCursor<CR>
-  imap <buffer> <silent> <F4> <ESC>:IDEToCursor<CR>
+  nmap <buffer> <Esc><Right> :IDEToCursor<CR>
+  imap <buffer> <Esc><Right> <C-o>:IDEToCursor<CR>
 
-  nmap <buffer> <silent> <F5> :<C-U>IDEUndoAll<CR>
-  imap <buffer> <silent> <F5> <ESC>:IDEUndoAll<CR>
+  "nmap <buffer> <silent> <F5> :<C-U>IDEUndoAll<CR>
+  "imap <buffer> <silent> <F5> <ESC>:IDEUndoAll<CR>
 
-  nmap <buffer> <silent> <F6> :<C-U>IDEToEOF<CR>
-  imap <buffer> <silent> <F6> <ESC>:IDEToEOF<CR>
+  "nmap <buffer> <silent> <F6> :<C-U>IDEToEOF<CR>
+  "imap <buffer> <silent> <F6> <ESC>:IDEToEOF<CR>
 
-  nmap <silent> <F7> :<C-U>IDERefresh<CR>
-  imap <silent> <F7> <ESC>:IDERefresh<CR>
+  nmap <buffer> <Esc><Left> :IDERefresh<CR>
+  imap <buffer> <Esc><Left> <C-o>:IDERefresh<CR>
 
-  nmap <buffer> <silent> <F8> :<C-U>IDEKill<CR>
-  imap <buffer> <silent> <F8> <ESC>:IDEKill<CR>
+  "nmap <buffer> <silent> <F8> :<C-U>IDEKill<CR>
+  "imap <buffer> <silent> <F8> <ESC>:IDEKill<CR>
 
   nnoremap <buffer> <Leader>c :call SetOption(1, 1)<CR>
   nnoremap <buffer> <Leader>C :call SetOption(1, 0)<CR>
